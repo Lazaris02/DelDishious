@@ -1,8 +1,7 @@
-# React + Vite
+# DelDishious
+A web application that one can browse others' recipies and upload his own!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Programming Languages and Libraries
+- html
+- tailwind css
+- react.js , material UI , react-router-dom for routing

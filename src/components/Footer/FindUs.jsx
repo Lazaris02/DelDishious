@@ -1,24 +1,25 @@
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+import "./FindUs.css";
+import insta_logo from "../../assets/Instagram.png";
+import github_logo from "../../assets/GitHub.png";
+import youtube_logo from "../../assets/YouTube.png";
 
 function FindUs() {
   return (
     <div>
-      <ul>
+      <ul className="FindUs">
         <li>
           <a href="">
-            <InstagramIcon fontSize="large" />
+            <img src={insta_logo} alt="instagram logo" />
           </a>
         </li>
         <li>
           <a href="">
-            <GitHubIcon fontSize="large" />
+            <img src={github_logo} alt="github logo" />
           </a>
         </li>
         <li>
           <a href="">
-            <YouTubeIcon fontSize="large" />
+            <img src={youtube_logo} alt="youtube logo" />
           </a>
         </li>
       </ul>

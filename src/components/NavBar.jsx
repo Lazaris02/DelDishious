@@ -7,7 +7,7 @@ function NavBar() {
       <nav className="NavBar">
         <Logo />
 
-        <ul className="middle-nav">
+        <ul className="text-3xl">
           <li>
             <Link to="/recipies">RECIPIES</Link>
           </li>
@@ -22,7 +22,7 @@ function NavBar() {
           </li>
         </ul>
 
-        <ul className="log-sign">
+        <ul className="text-xl mr-2">
           <li>
             <Link to="/login">LOGIN</Link>
           </li>

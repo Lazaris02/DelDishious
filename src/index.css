@@ -22,10 +22,6 @@
     @apply flex self-center;
 }
 
-.NavBar img{
-    @apply h-24;
-}
-
 .NavBar li{
  @apply px-4;
 }
@@ -34,16 +30,11 @@
     @apply hover:rounded hover:bg-white hover:text-[#01796F];
 }
 
-.NavBar .middle-nav{
-    @apply text-3xl;
-}
-
-
-.NavBar .log-sign {
-    @apply text-xl mr-2;
-} 
-
-
 .Footer{
     @apply mt-auto;
 }
+
+
+
+
+

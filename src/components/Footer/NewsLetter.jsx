@@ -1,8 +1,15 @@
-function NewsLetter() {
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+
+function NewsLetter({ form_class, input_class }) {
   return (
     <>
-      <form action="#">
-        <input type="text" placeholder="Subscribe to our Newsletter!" />
+      <form action="#" className={form_class}>
+        <AlternateEmailIcon fontSize="large" />
+        <input
+          className={input_class}
+          type="text"
+          placeholder="Subscribe to our Newsletter"
+        />
       </form>
     </>
   );

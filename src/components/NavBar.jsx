@@ -4,22 +4,30 @@ import Logo from "./Logo";
 function NavBar() {
   return (
     <>
-      <nav>
+      <nav className="NavBar">
         <Logo />
-        <ul>
+
+        <ul className="middle-nav">
           <li>
-            <Link to="/recipies">Recipies</Link>
+            <Link to="/recipies">RECIPIES</Link>
           </li>
           <li>
-            <Link to="/aboutus">About us</Link>
+            <Link to="/favorites">FAVORITES</Link>
+          </li>
+          <li>
+            <Link to="/aboutus">ABOUT US</Link>
+          </li>
+          <li>
+            <Link to="/contactus">CONTACT US</Link>
           </li>
         </ul>
-        <ul>
+
+        <ul className="log-sign">
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login">LOGIN</Link>
           </li>
           <li>
-            <Link to="/signup">SignUp</Link>
+            <Link to="/signup">SIGN UP</Link>
           </li>
         </ul>
       </nav>

@@ -5,7 +5,7 @@ import FindUs from "./FindUs";
 function Footer() {
   return (
     <>
-      <footer>
+      <footer className="Footer">
         <Logo />
         <NewsLetter />
         <span>&copy; All rights reserved</span>

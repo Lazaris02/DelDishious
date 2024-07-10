@@ -1,11 +1,19 @@
-function RecipeSearch(){
+import SearchIcon from "@mui/icons-material/Search";
 
-    return(
-        <div>
-            
-        </div>
-    );
+function RecipeSearch() {
+  return (
+    <div className="flex justify-center">
+      <span className="bg-[#01796F] rounded p-1">
+        <SearchIcon style={{ color: "white" }} fontSize="large" />
+      </span>
+
+      <input
+        type="text"
+        placeholder="Search Recipe"
+        className="text-[#01796F] p-1 font-semibold text-center rounded border-2 border-[#01796F]"
+      />
+    </div>
+  );
 }
-
 
 export default RecipeSearch;

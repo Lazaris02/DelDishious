@@ -9,7 +9,7 @@ function NavBar() {
 
         <ul className="text-3xl">
           <li>
-            <Link to="/recipies">RECIPIES</Link>
+            <Link to="/recipies">RECIPES</Link>
           </li>
           <li>
             <Link to="/favorites">FAVORITES</Link>

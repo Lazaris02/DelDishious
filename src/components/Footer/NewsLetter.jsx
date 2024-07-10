@@ -8,7 +8,7 @@ function NewsLetter({ form_class, input_class }) {
         <input
           className={input_class}
           type="text"
-          placeholder="Subscribe to our Newsletter"
+          placeholder="Subscribe for News"
         />
       </form>
     </>

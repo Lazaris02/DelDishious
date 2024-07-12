@@ -26,7 +26,7 @@ function Recipes() {
   useEffect(() => {
     const fetchRecipeData = async () => {
       const response = await fetch(
-        "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+        "https://www.themealdb.com/api/json/v1/1/search.php?f=b"
       );
       const data = await response.json();
       updateRecipes(data["meals"]); //so that we get the meals

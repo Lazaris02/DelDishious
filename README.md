@@ -16,9 +16,10 @@ A web application that one can browse others' recipies and upload his own!
 - create individual recipe page
 - about us page
 - contact us page
+- favorites page
 - login page
 - sign up page
-  -responsive design
+- responsive design
 
 ### backend
 

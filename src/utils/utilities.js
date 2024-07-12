@@ -12,3 +12,11 @@ export function getFirst10Words(str) {
 
   return first10Words.join(" "); //reattach the string
 }
+
+export function randomRating() {
+  return Math.floor(Math.random() * 5) + 1;
+}
+
+export function randomNumOfRatings() {
+  return Math.floor(Math.random() * 100 + 1);
+}

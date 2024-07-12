@@ -14,8 +14,11 @@ function FavoriteButton({ meal_id }) {
   //check if for the specific user this meal is
   // in his fav list ...
   return (
-    <span className="z-10 absolute right-0 bg-[#01796F] rounded-bl-lg pl-1">
-      <button className="rounded-full" onClick={clickFavorite}>
+    <span className="z-10 absolute right-0 bg-[#01796F] rounded-bl-lg pl-1 group">
+      <button
+        className="rounded-full group-hover:animate-pulse"
+        onClick={clickFavorite}
+      >
         {isFavorite ? (
           <FavoriteIcon style={{ color: "red" }} fontSize="large" />
         ) : (

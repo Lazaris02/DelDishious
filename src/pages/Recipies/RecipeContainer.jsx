@@ -1,8 +1,8 @@
 import TimeComponent from "./TimeComponent";
 import { findImage, getFirst10Words } from "../../utils/utilities";
 import FavoriteButton from "./FavoriteButton";
-import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
+import RatingComponent from "../../components/RatingComponent";
 
 function RecipeContainer({ recipe }) {
   const image = findImage(recipe.url);
@@ -28,9 +28,8 @@ function RecipeContainer({ recipe }) {
         <p className="text-center text-2xl">
           {getFirst10Words(recipe.instructions)}...
         </p>
-        <div className="text-center">
-          <Rating name="read-only" value={2} readOnly />
-        </div>
+
+        <RatingComponent />
       </div>
     </Link>
   );

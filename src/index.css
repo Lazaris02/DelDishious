@@ -49,3 +49,7 @@
 .indie-text {
   font-family: "Indie Flower", cursive;
 }
+
+.bg-text-combo {
+  @apply bg-[#01796F] text-white;
+}

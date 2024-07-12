@@ -1,7 +1,14 @@
+import PageTitle from "../../components/PageTitle";
+import InitialText from "./InitialText";
+import Featured from "./Featured";
+PageTitle;
+
 function Home() {
   return (
     <>
-      <h1>Home</h1>
+      <PageTitle title="Home" />
+      <InitialText />
+      <Featured />
     </>
   );
 }

@@ -1,40 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-#root{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    @apply font-body;
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  @apply font-body;
 }
 
-
-.NavBar , .Footer{
-    @apply flex justify-between bg-[#01796F] text-white;
+.NavBar,
+.Footer {
+  @apply flex justify-between bg-[#01796F] text-white;
 }
 
-
-.NavBar > *{
-    @apply flex self-center;
+.NavBar > * {
+  @apply flex self-center;
 }
 
-.NavBar li{
- @apply px-4;
+.NavBar li {
+  @apply px-4;
 }
 
-.NavBar li a{
-    @apply hover:rounded hover:bg-white hover:text-[#01796F];
+.NavBar li a {
+  @apply hover:rounded hover:bg-white hover:text-[#01796F];
 }
 
-.Footer{
-    @apply mt-auto;
+.Footer {
+  @apply mt-auto;
 }
 
+.fade-in-text {
+  animation: fadeIn 5s;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-
-
+.indie-text {
+  font-family: "Indie Flower", cursive;
+}

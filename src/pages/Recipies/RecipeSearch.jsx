@@ -2,7 +2,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 function RecipeSearch() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-4 mb-4">
       <span className="bg-[#01796F] rounded p-1">
         <SearchIcon style={{ color: "white" }} fontSize="large" />
       </span>

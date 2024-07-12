@@ -3,6 +3,7 @@ import RecipeSearch from "./RecipeSearch";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Button } from "@mui/material";
+import PageTitle from "../../components/PageTitle";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
@@ -34,8 +35,8 @@ function Recipes() {
   }, []);
   return (
     <>
+      <PageTitle title="Recipes" />
       <RecipeSearch />
-      <h1>Recipes</h1>
       <div className="sm:grid-cols-1 md:grid-cols-2 grid grid-rows-auto gap-4 place-items-center">
         {recipes.map((recipe) => {
           return <RecipeContainer recipe={recipe} key={uuidv4()} />;

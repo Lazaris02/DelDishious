@@ -20,3 +20,20 @@ export function randomRating() {
 export function randomNumOfRatings() {
   return Math.floor(Math.random() * 100 + 1);
 }
+
+export function transformRecipes(jsonRecipes) {
+  //returns an array  that only contains the fields needed for a recipe ad
+  const currRecipes = [];
+  Object.values(jsonRecipes).forEach((value) => {
+    currRecipes.push({
+      id: value.idMeal,
+      meal_name: value.strMeal,
+      category: value.strCategory,
+      instructions: value.strInstructions,
+      youtube_video: value.strYoutube,
+      origin: value.strArea,
+      url: value.strImageSource,
+    });
+  });
+  return currRecipes;
+}

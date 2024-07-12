@@ -4,23 +4,12 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Button } from "@mui/material";
 import PageTitle from "../../components/PageTitle";
+import { transformRecipes } from "../../utils/utilities";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
   const updateRecipes = (jsonRecipes) => {
-    const currRecipes = [];
-    Object.values(jsonRecipes).forEach((value) => {
-      currRecipes.push({
-        id: value.idMeal,
-        meal_name: value.strMeal,
-        category: value.strCategory,
-        instructions: value.strInstructions,
-        youtube_video: value.strYoutube,
-        origin: value.strArea,
-        url: value.strImageSource,
-      });
-    });
-    setRecipes(currRecipes);
+    setRecipes(transformRecipes(jsonRecipes));
   };
 
   useEffect(() => {

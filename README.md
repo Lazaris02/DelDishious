@@ -11,6 +11,7 @@ A web application that one can browse others' recipies and upload his own!
 ## TO DOs
 
 - make the search bar of recipes functional
+- add animation to featured tabs
 - make view more button functional
 - create home page
 - create individual recipe page

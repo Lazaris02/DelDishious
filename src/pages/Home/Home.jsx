@@ -8,7 +8,7 @@ function Home() {
     <>
       <PageTitle title="Home" />
       <InitialText />
-      <Featured />
+      <Featured window={2} />
     </>
   );
 }

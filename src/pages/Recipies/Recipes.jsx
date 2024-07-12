@@ -8,8 +8,19 @@ import { transformRecipes } from "../../utils/utilities";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
+
+  const askForMore = async () => {
+    const url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a";
+    const response = await fetch(url);
+    const data = await response.json();
+
+    console.log(data);
+
+    updateRecipes(data["meals"]);
+  };
+
   const updateRecipes = (jsonRecipes) => {
-    setRecipes(transformRecipes(jsonRecipes));
+    setRecipes((previous) => previous.concat(transformRecipes(jsonRecipes)));
   };
 
   useEffect(() => {
@@ -32,7 +43,11 @@ function Recipes() {
         })}
       </div>
       <div className="text-center mb-4 mt-4">
-        <Button variant="contained" style={{ backgroundColor: "#FF6F61" }}>
+        <Button
+          variant="contained"
+          style={{ backgroundColor: "#FF6F61" }}
+          onClick={askForMore}
+        >
           View More
         </Button>
       </div>

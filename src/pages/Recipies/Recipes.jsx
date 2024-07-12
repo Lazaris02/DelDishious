@@ -36,12 +36,12 @@ function Recipes() {
     <>
       <RecipeSearch />
       <h1>Recipes</h1>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="sm:grid-cols-1 md:grid-cols-2 grid grid-rows-auto gap-4 place-items-center">
         {recipes.map((recipe) => {
           return <RecipeContainer recipe={recipe} key={uuidv4()} />;
         })}
       </div>
-      <div className="text-center mb-2">
+      <div className="text-center mb-4 mt-4">
         <Button variant="contained" style={{ backgroundColor: "#FF6F61" }}>
           View More
         </Button>

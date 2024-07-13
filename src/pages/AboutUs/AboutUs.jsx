@@ -1,7 +1,15 @@
+import PageTitle from "../../components/PageTitle";
+import Usp from "./Usp";
+import Mission from "./Mission";
+import Team from "./Team";
+
 function AboutUs() {
   return (
     <>
-      <h1>About Us</h1>
+      <PageTitle title="Welcome to DelDishious!" />
+      <Mission />
+      <Usp />
+      <Team />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import SubHeader from "./SubHeader";
+import SubHeader from "../../components/SubHeader";
 
 function InitialText() {
   return (

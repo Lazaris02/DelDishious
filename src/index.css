@@ -53,3 +53,11 @@
 .bg-text-combo {
   @apply bg-[#01796F] text-white;
 }
+
+.form-input-design {
+  @apply bg-gray-200 text-[#01796F] rounded-lg hover:bg-gray-300 text-center m-2;
+}
+
+.form-label-design {
+  @apply text-white;
+}

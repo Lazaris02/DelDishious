@@ -4,6 +4,7 @@ import Recipies from "../pages/Recipies/Recipes";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 function NavRoutes() {
   return (
@@ -15,7 +16,7 @@ function NavRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/favorites" element={<SignUp />} />
-        <Route path="/contactus" element={<SignUp />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
     </>
   );

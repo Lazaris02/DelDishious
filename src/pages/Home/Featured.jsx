@@ -1,4 +1,4 @@
-import SubHeader from "./SubHeader";
+import SubHeader from "../../components/SubHeader";
 import { useEffect, useState } from "react";
 import { transformRecipes } from "../../utils/utilities";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";

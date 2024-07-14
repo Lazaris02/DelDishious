@@ -32,6 +32,7 @@ A web application that one can browse others' recipies and upload his own!
 - add a submit button to newsletter in the footer
 - make a functional newsletter tab
 - handle errors if the fetch from API doesn't work!
+- add an error page that shows up when something is wrong!
 
 ### Home Page
 

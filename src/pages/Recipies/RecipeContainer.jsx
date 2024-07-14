@@ -6,8 +6,12 @@ import RatingComponent from "../../components/RatingComponent";
 
 function RecipeContainer({ recipe }) {
   const image = findImage(recipe.url);
+  const singleURL = "/recipies/" + recipe.id;
   return (
-    <Link className="text-white bg-[#01796F]  flex flex-col h-full flex-grow rounded-lg min-h-64 w-10/12 group">
+    <Link
+      to={singleURL}
+      className="text-white bg-[#01796F]  flex flex-col h-full flex-grow rounded-lg min-h-64 w-10/12 group"
+    >
       <div className="flex flex-col rounded-lg relative h-1/2 ">
         <TimeComponent time="40'-50'" />
         <FavoriteButton meal_id={recipe.id} />

@@ -1,7 +1,7 @@
 import Ingredient from "./Ingredient";
 
 function Ingredients({ ingredients }) {
-  console.log(ingredients.length);
+  console.log(ingredients);
   return (
     <>
       <h3>Ingredients:</h3>

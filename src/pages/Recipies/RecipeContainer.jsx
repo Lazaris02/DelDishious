@@ -1,16 +1,16 @@
 import TimeComponent from "./TimeComponent";
-import { findImage, getFirst10Words } from "../../utils/utilities";
+import { getFirstNWords } from "../../utils/utilities";
 import FavoriteButton from "./FavoriteButton";
 import { Link } from "react-router-dom";
 import RatingComponent from "../../components/RatingComponent";
 
 function RecipeContainer({ recipe }) {
-  const image = findImage(recipe.url);
+  const image = recipe.thumbnail;
   const singleURL = "/recipies/" + recipe.id;
   return (
     <Link
       to={singleURL}
-      className="text-white bg-[#01796F]  flex flex-col h-full flex-grow rounded-lg min-h-64 w-10/12 group"
+      className="text-white bg-[#01796F]  flex flex-col h-full flex-grow rounded-lg min-h-64 w-96  group"
     >
       <div className="flex flex-col rounded-lg relative h-1/2 ">
         <TimeComponent time="40'-50'" />
@@ -24,13 +24,13 @@ function RecipeContainer({ recipe }) {
           {recipe.meal_name}
         </h2>
       </div>
-      <div className="h-auto">
+      <div className="h-auto flex flex-col">
         <p className="text-center text-xl">
           {recipe.category}, {recipe.origin}
         </p>
 
-        <p className="text-center text-2xl">
-          {getFirst10Words(recipe.instructions)}...
+        <p className="text-center text-xl text-wrap w-auto p-1 self-center bg-black bg-opacity-50 text-white rounded-lg">
+          {recipe.tag === null ? "No Tag" : recipe.tag}
         </p>
 
         <RatingComponent />

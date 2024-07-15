@@ -5,11 +5,12 @@ import {
   transformSingleRecipe,
 } from "../../../utils/utilities";
 import Ingredients from "./Ingredients";
+import RatingSection from "./RatingSection";
 
 function RecipeSingle() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState({});
-  let ingredients;
+  const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -25,8 +26,7 @@ function RecipeSingle() {
         console.log(data["meals"]);
 
         setRecipe(transformSingleRecipe(data["meals"][0]));
-        ingredients = packRecipeKeys(data["meals"][0]);
-        console.log(ingredients);
+        setIngredients(packRecipeKeys(data["meals"][0]));
       } catch (err) {
         console.error("Error fetching or parsing", err);
       }
@@ -38,14 +38,8 @@ function RecipeSingle() {
     <div>
       <h2>{recipe.meal_name}</h2>
       <p>{recipe.category}</p>
-      <video
-        src={recipe.youtube_video}
-        className="w-10/12 h-10/12"
-        controls
-        fs="true"
-      >
-        Error playing the video!
-      </video>
+      <Ingredients ingredients={ingredients} />
+      <RatingSection defaultRating={2} />
     </div>
   );
 }

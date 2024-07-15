@@ -5,12 +5,22 @@ export function findImage(url) {
   return url === null ? default_image_source : url;
 }
 
-export function getFirst10Words(str) {
-  let words = str.split(" "); //splits on empty space
+export function getFirstNWords(str, n, split_reg) {
+  if (str === null) {
+    return str;
+  }
 
-  let first10Words = words.slice(0, 10); //take the first 10 elements of array
+  let words = str.split(split_reg); //splits on split_regex
 
-  return first10Words.join(" "); //reattach the string
+  console.log(words, words.length);
+
+  if (words.length <= n) {
+    return str;
+  }
+
+  let firstNWords = words.slice(0, n); //take the first N elements of array
+
+  return firstNWords.join(split_reg); //reattach the string
 }
 
 export function randomRating() {
@@ -27,12 +37,13 @@ export function transformRecipes(jsonRecipes) {
   Object.values(jsonRecipes).forEach((value) => {
     currRecipes.push({
       id: value.idMeal,
-      meal_name: value.strMeal,
+      meal_name: getFirstNWords(value.strMeal, 6, " "),
       category: value.strCategory,
       instructions: value.strInstructions,
       youtube_video: value.strYoutube,
       origin: value.strArea,
-      url: value.strImageSource,
+      thumbnail: value.strMealThumb,
+      tag: getFirstNWords(value.strTags, 5, ","),
     });
   });
   return currRecipes;
@@ -49,7 +60,8 @@ export function transformSingleRecipe(jsonRecipe) {
     instructions: jsonRecipe.strInstructions,
     youtube_video: jsonRecipe.strYoutube,
     origin: jsonRecipe.strArea,
-    url: jsonRecipe.strImageSource,
+    thumbnail: jsonRecipe.strMealThumb,
+    tag: jsonRecipe.strTags,
   };
 }
 

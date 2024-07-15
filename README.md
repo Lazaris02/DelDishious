@@ -27,8 +27,7 @@ A web application that one can browse others' recipies and upload his own!
 - create signup page
 - create favorites page
 - create addRecipe page
-- create individual recipe page
-- make the recipe ads have a proper shape!
+- style individual recipe page
 - add a submit button to newsletter in the footer
 - make a functional newsletter tab
 - handle errors if the fetch from API doesn't work!

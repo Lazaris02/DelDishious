@@ -1,8 +1,8 @@
 import default_image_source from "../assets/default_img.webp";
 
-export function findImage(url) {
-  //returns a url path for an image depending on the category hashed
-  return url === null ? default_image_source : url;
+export function generateUniqueId() {
+  //generates a unique id fast -- to avoid using uuid which is not needed
+  return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
 
 export function getRandomLowerCaseLetter() {
@@ -18,8 +18,6 @@ export function getFirstNWords(str, n, split_reg) {
   }
 
   let words = str.split(split_reg); //splits on split_regex
-
-  console.log(words, words.length);
 
   if (words.length <= n) {
     return str;
@@ -59,7 +57,6 @@ export function transformRecipes(jsonRecipes) {
 export function transformSingleRecipe(jsonRecipe) {
   //packs only the necessary key-value pairs of the object
   //into a new more lightweight version and easier to handle names
-  console.log(jsonRecipe[1]);
   return {
     id: jsonRecipe.idMeal,
     meal_name: jsonRecipe.strMeal,

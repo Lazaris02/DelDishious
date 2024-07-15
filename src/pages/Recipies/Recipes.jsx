@@ -4,19 +4,27 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Button } from "@mui/material";
 import PageTitle from "../../components/PageTitle";
-import { transformRecipes } from "../../utils/utilities";
+import {
+  getRandomLowerCaseLetter,
+  transformRecipes,
+} from "../../utils/utilities";
+
+import LoadingButton from "../../components/LoadingButton";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
+  const [isFetching, setIsFetching] = useState(false);
 
   const askForMore = async () => {
-    const url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a";
+    setIsFetching(true);
+    const randL = getRandomLowerCaseLetter();
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?f=${randL}`;
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log(data);
-
+    console.log("New recipes fetched!");
     updateRecipes(data["meals"]);
+    setIsFetching(false);
   };
 
   const updateRecipes = (jsonRecipes) => {
@@ -25,11 +33,13 @@ function Recipes() {
 
   useEffect(() => {
     const fetchRecipeData = async () => {
+      setIsFetching(true);
       const response = await fetch(
         "https://www.themealdb.com/api/json/v1/1/search.php?f=b"
       );
       const data = await response.json();
       updateRecipes(data["meals"]); //so that we get the meals
+      setIsFetching(false);
     };
     fetchRecipeData();
   }, []);
@@ -47,8 +57,13 @@ function Recipes() {
           variant="contained"
           style={{ backgroundColor: "#FF6F61" }}
           onClick={askForMore}
+          disabled={isFetching}
         >
-          View More
+          {isFetching ? (
+            <LoadingButton buttonColor="white" />
+          ) : (
+            <span className="text-lg">View More</span>
+          )}
         </Button>
       </div>
     </>

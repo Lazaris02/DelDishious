@@ -5,6 +5,13 @@ export function findImage(url) {
   return url === null ? default_image_source : url;
 }
 
+export function getRandomLowerCaseLetter() {
+  const min = 97; //ASCII value for 'a'
+  const max = 122; //ASCII value for 'z'
+  const randomAscii = Math.floor(Math.random() * (max - min + 1)) + min;
+  return String.fromCharCode(randomAscii);
+}
+
 export function getFirstNWords(str, n, split_reg) {
   if (str === null) {
     return str;

@@ -10,6 +10,7 @@ import {
 } from "../../utils/utilities";
 
 import LoadingButton from "../../components/LoadingButton";
+import RecipeCategories from "./RecipeCategories";
 
 function Recipes() {
   const [recipes, setRecipes] = useState([]);
@@ -47,10 +48,13 @@ function Recipes() {
     <>
       <PageTitle title="Recipes" />
       <RecipeSearch />
-      <div className="sm:grid-cols-1 md:grid-cols-2 grid grid-rows-auto gap-4 place-items-center">
-        {recipes.map((recipe) => {
-          return <RecipeContainer recipe={recipe} key={uuidv4()} />;
-        })}
+      <div className="recipe-grid">
+        <RecipeCategories />
+        <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 grid grid-rows-auto gap-4 place-items-center">
+          {recipes.map((recipe) => {
+            return <RecipeContainer recipe={recipe} key={uuidv4()} />;
+          })}
+        </div>
       </div>
       <div className="text-center mb-4 mt-4">
         <Button

@@ -32,27 +32,30 @@ function RecipeSearch() {
     fetchSearchList();
   }, [searchString]);
   return (
-    <div>
-      <div className="flex justify-center mt-4 mb-4">
-        <label className="bg-[#01796F] rounded p-1" htmlFor="search-recipe">
-          <SearchIcon style={{ color: "white" }} fontSize="large" />
-        </label>
-
+    <div className="flex justify-center mt-4 mb-4 relative">
+      <label className="bg-[#01796F] rounded p-1" htmlFor="search-recipe">
+        <SearchIcon style={{ color: "white" }} fontSize="large" />
+      </label>
+      <div>
         <input
           id="search-recipe"
           type="text"
           value={searchString}
           placeholder="Search Recipe"
           onChange={(e) => setSearchString(e.target.value)}
-          className="text-[#01796F] p-1 font-semibold text-center rounded border-2 border-[#01796F]"
+          className="text-[#01796F] p-1 font-semibold text-center rounded border-2 border-[#01796F] w-96 mt-1"
         />
-        <ul>
-          {searchResults.map((sl) => (
-            <RecipeSearchResult value={sl} key={generateUniqueId()} />
+
+        <ul className="absolute top-0  p-2 w-96 z-30 mt-10">
+          {searchResults.slice(0, 5).map((sl) => (
+            <RecipeSearchResult
+              value={sl["name"]}
+              mealid={sl["id"]}
+              key={generateUniqueId()}
+            />
           ))}
         </ul>
       </div>
-      <span>{searchResults}</span>
     </div>
   );
 }
@@ -65,7 +68,10 @@ function handleSearchList(jsonRecipeArray) {
   }
   const mealNameArray = [];
   for (let i = 0; i < jsonRecipeArray.length; i++) {
-    mealNameArray.push(jsonRecipeArray[i]["strMeal"]);
+    mealNameArray.push({
+      name: jsonRecipeArray[i]["strMeal"],
+      id: jsonRecipeArray[i]["idMeal"],
+    });
   }
   console.log(mealNameArray, "finished product!");
   return mealNameArray.sort();

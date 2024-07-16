@@ -39,7 +39,6 @@ A web application that one can browse others' recipies and upload his own!
 
 ### Recipes Page
 
-- make the search input functional!
 - add filter by category
 
 ### Contact Us Page

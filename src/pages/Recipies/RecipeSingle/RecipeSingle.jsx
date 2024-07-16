@@ -38,6 +38,9 @@ function RecipeSingle() {
     <div>
       <h2>{recipe.meal_name}</h2>
       <p>{recipe.category}</p>
+      <img src={recipe.thumbnail} alt="" />
+      <p>{recipe.tag}</p>
+      <p>recipe.instructions</p>
       <Ingredients ingredients={ingredients} />
       <RatingSection defaultRating={2} />
     </div>

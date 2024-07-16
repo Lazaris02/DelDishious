@@ -61,3 +61,16 @@
 .form-label-design {
   @apply text-white;
 }
+
+.radio {
+  @apply ml-2;
+}
+
+.radio-label {
+  @apply text-white p-2 text-lg hover:text-[#f0f0f0];
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}

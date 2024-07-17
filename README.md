@@ -39,7 +39,7 @@ A web application that one can browse others' recipies and upload his own!
 
 ### Recipes Page
 
-- add filter by category
+- make categories tab functional
 
 ### Contact Us Page
 

@@ -1,6 +1,6 @@
 function CategoryRadio({ category }) {
   return (
-    <div>
+    <div className="hover:bg-[#00655B] rounded-lg">
       <input
         type="radio"
         name="category_radio"

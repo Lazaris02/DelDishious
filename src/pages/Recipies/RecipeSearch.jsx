@@ -2,10 +2,28 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
 import RecipeSearchResult from "./RecipeSearchResult";
 import { generateUniqueId } from "../../utils/utilities";
+import { useNavigate } from "react-router-dom";
 
 function RecipeSearch() {
   const [searchString, setSearchString] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
+
+  const formSubmit = () => {
+    const firstResult = searchResults[0];
+    console.log(firstResult, "hi from first result");
+    if (firstResult === "No matching results") {
+      navigate("/Not Found");
+      return;
+    }
+    navigate(`/recipies/${firstResult["id"]}`);
+  };
+  const handleKeySubmit = (e) => {
+    if (e.key === "Enter") {
+      console.log("You pressed enter");
+      formSubmit();
+    }
+  };
 
   useEffect(() => {
     const fetchSearchList = async () => {
@@ -33,7 +51,11 @@ function RecipeSearch() {
   }, [searchString]);
   return (
     <div className="flex justify-center mt-4 mb-4 relative">
-      <label className="bg-[#01796F] rounded p-1" htmlFor="search-recipe">
+      <label
+        className="bg-[#01796F] rounded p-1"
+        htmlFor="search-recipe"
+        onClick={formSubmit}
+      >
         <SearchIcon style={{ color: "white" }} fontSize="large" />
       </label>
       <div>
@@ -43,6 +65,9 @@ function RecipeSearch() {
           value={searchString}
           placeholder="Search Recipe"
           onChange={(e) => setSearchString(e.target.value)}
+          onKeyDown={(e) => {
+            handleKeySubmit(e);
+          }}
           className="text-[#01796F] p-1 font-semibold text-center rounded border-2 border-[#01796F] w-96 mt-1"
         />
 

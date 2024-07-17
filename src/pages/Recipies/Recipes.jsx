@@ -50,7 +50,7 @@ function Recipes() {
       <RecipeSearch />
       <div className="recipe-grid">
         <RecipeCategories />
-        <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 grid grid-rows-auto gap-4 place-items-center">
+        <div className="sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 grid grid-rows-auto gap-4 place-items-center">
           {recipes.map((recipe) => {
             return <RecipeContainer recipe={recipe} key={uuidv4()} />;
           })}

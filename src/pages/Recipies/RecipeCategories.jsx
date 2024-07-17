@@ -26,9 +26,9 @@ function RecipeCategories() {
   }, []);
 
   return (
-    <div>
-      <span className="bg-[#01796F] rounded-lg flex flex-wrap flex-col fixed top-1/3 ml-1">
-        <div>
+    <form>
+      <span className="bg-[#01796F] rounded-lg flex flex-wrap flex-col fixed top-0 ml-1">
+        <div className="hover:bg-[#00655B] rounded-lg">
           <input
             type="radio"
             name="category_radio"
@@ -45,7 +45,7 @@ function RecipeCategories() {
           <CategoryRadio category={c["strCategory"]} key={generateUniqueId()} />
         ))}
       </span>
-    </div>
+    </form>
   );
 }
 

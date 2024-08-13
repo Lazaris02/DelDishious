@@ -13,8 +13,8 @@ export function getRandomLowerCaseLetter() {
 }
 
 export function getFirstNWords(str, n, split_reg) {
-  if (str === null) {
-    return str;
+  if (str === null || str === undefined) {
+    return "No Tag";
   }
 
   let words = str.split(split_reg); //splits on split_regex
@@ -81,7 +81,8 @@ export function packRecipeKeys(jsonRecipe) {
       (key) =>
         key.startsWith("strIngredient") &&
         jsonRecipe[key] !== null &&
-        jsonRecipe[key] !== ""
+        jsonRecipe[key] !== "" &&
+        jsonRecipe[key] !== undefined
     )
     .map((key) => jsonRecipe[key]);
 

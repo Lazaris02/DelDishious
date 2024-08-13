@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import CategoryRadio from "./CategoryRadio";
 import { generateUniqueId } from "../../utils/utilities";
+import { getRandomLowerCaseLetter } from "../../utils/utilities";
 
-function RecipeCategories() {
+function RecipeCategories({ filterFunction }) {
   const [categories, setCategories] = useState([]);
+
+  const changeFilter = (e) => {
+    console.log(e.target.value);
+    filterFunction(e.target.value);
+  };
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -26,14 +32,15 @@ function RecipeCategories() {
   }, []);
 
   return (
-    <form>
-      <span className="bg-[#01796F] rounded-lg flex flex-wrap flex-col fixed top-0 ml-1">
+    <div>
+      <div className="bg-[#01796F] rounded-lg flex flex-wrap flex-col fixed top-32 ml-1">
         <div className="hover:bg-[#00655B] rounded-lg">
           <input
             type="radio"
             name="category_radio"
-            value="None"
+            value=""
             id="none"
+            onClick={changeFilter}
             className="radio"
             key={generateUniqueId()}
           />
@@ -42,10 +49,14 @@ function RecipeCategories() {
           </label>
         </div>
         {categories.map((c) => (
-          <CategoryRadio category={c["strCategory"]} key={generateUniqueId()} />
+          <CategoryRadio
+            category={c["strCategory"]}
+            key={generateUniqueId()}
+            changeFunction={changeFilter}
+          />
         ))}
-      </span>
-    </form>
+      </div>
+    </div>
   );
 }
 

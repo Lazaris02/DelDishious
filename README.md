@@ -28,8 +28,7 @@ A web application that one can browse others' recipies and upload his own!
 - create favorites page
 - create addRecipe page
 - style individual recipe page
-- add a submit button to newsletter in the footer - makes a call to the server and stores the email address no need to be a user
-- make a functional newsletter tab
+- make a functional newsletter tab - use form hook , add validation for email.
 - handle errors if the fetch from API doesn't work!
 - add an error page that shows up when something is wrong! , wrong redirecting
 - stop the randomization of ratings when page is refreshed!
@@ -47,9 +46,7 @@ A web application that one can browse others' recipies and upload his own!
 
 ### Contact Us Page
 
-- add validation to the fields
-- make the form functinal (to make requests).
-- check out the form hook and how to use it.
+- using form hook 1. add validation 2. handle the submission of the form
 
 ### backend
 

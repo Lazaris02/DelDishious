@@ -3,7 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 function PersonProfile({ person }) {
   const { personImg, personName, personRole, gitHubLink } = person;
   return (
-    <div className="p-4 flex flex-col items-center">
+    <div className="flex flex-col items-center p-4">
       <img
         src={personImg}
         alt="team_member_1"

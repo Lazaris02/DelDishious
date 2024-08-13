@@ -4,9 +4,9 @@ import youtube_logo from "../../assets/YouTube.png";
 
 function FindUs() {
   return (
-    <div className="flex flex-col gap-y-2">
-      <h2 className="text-2xl self-center p-2">Social Media:</h2>
-      <ul className="flex gap-x-2 px-2">
+    <div className="flex flex-col gap-y-2  flex-1 items-end">
+      <h2 className="text-2xl  p-4">Social Media</h2>
+      <ul className="flex gap-x-2 px-2 ">
         <li>
           <a href="">
             <img src={insta_logo} alt="instagram logo" />

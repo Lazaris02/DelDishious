@@ -32,6 +32,7 @@ A web application that one can browse others' recipies and upload his own!
 - handle errors if the fetch from API doesn't work!
 - add an error page that shows up when something is wrong! , wrong redirecting
 - stop the randomization of ratings when page is refreshed!
+- center footer items properly
 
 ### Home Page
 

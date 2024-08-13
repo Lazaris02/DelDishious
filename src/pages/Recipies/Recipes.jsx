@@ -72,8 +72,8 @@ function Recipes() {
             return <RecipeContainer recipe={recipe} key={uuidv4()} />;
           })}
         </div>
-      </div>
-      <div className="text-center mb-4 mt-4">
+      
+      <div className="text-center mb-4 mt-4 col-start-2 col-span-2 ">
         <Button
           variant="contained"
           style={{ backgroundColor: "#FF6F61" }}
@@ -86,6 +86,7 @@ function Recipes() {
             <span className="text-lg">View More</span>
           )}
         </Button>
+      </div>
       </div>
     </>
   );

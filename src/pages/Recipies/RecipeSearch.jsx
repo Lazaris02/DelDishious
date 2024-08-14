@@ -20,7 +20,6 @@ function RecipeSearch() {
   };
   const handleKeySubmit = (e) => {
     if (e.key === "Enter") {
-      console.log("You pressed enter");
       formSubmit();
     }
   };
@@ -44,10 +43,12 @@ function RecipeSearch() {
         const searchResultArray = handleSearchList(data["meals"]); //array of string search results
         setSearchResults(searchResultArray);
       } catch (err) {
-        console.error("Error occured", err);
+        //handle error here
       }
     };
-    fetchSearchList();
+    
+    const delayedSearch = setTimeout(fetchSearchList,500);
+    return () => clearTimeout(delayedSearch);
   }, [searchString]);
   return (
     <div className="flex justify-center mt-4 mb-4 relative">
@@ -63,6 +64,7 @@ function RecipeSearch() {
           id="search-recipe"
           type="text"
           value={searchString}
+          autoComplete="off"
           placeholder="Search Recipe"
           onChange={(e) => setSearchString(e.target.value)}
           onKeyDown={(e) => {

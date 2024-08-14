@@ -32,7 +32,6 @@ function Featured({ window }) {
 
     setDisplayFrom((c) => c + 1);
     setDisplayTo((c) => c + 1);
-    console.log(displayFrom, displayTo,max);
   };
 
   useEffect(() => {

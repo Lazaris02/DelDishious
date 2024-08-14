@@ -16,7 +16,7 @@ A web application that one can browse others' recipies and upload his own!
 
 ### Backend
 
-- tbd
+- mongodb , copy some of the data from mealdb for illustration purposes , create REST API
 
 ## TO DOs
 
@@ -29,20 +29,19 @@ A web application that one can browse others' recipies and upload his own!
 - create addRecipe page
 - style individual recipe page
 - make a functional newsletter tab - use form hook , add validation for email.
-- handle errors if the fetch from API doesn't work!
+
+- handle errors if the fetch from API doesn't work! - use state for errors and handle them in useEffect!
 - add an error page that shows up when something is wrong! , wrong redirecting
-- stop the randomization of ratings when page is refreshed!
+
+- stop the randomization of ratings when page is refreshed! -  probably possible when mongodb is created and the ratings are generated once in backend + merged with fetched data
 
 ### Home Page
 
-- add animation to featured tab
-- fix the featured tab (right button goes over limit)
+- add animation to featured tab - (optional?)
 
 ### Recipes Page
 
-- make categories tab functional (something doesn't work properly when clicking the categories)
-- make the search bar have latency on input and wait for us to finish typing - reduce the number of api requests
-- center the view more button
+- make the filters work properly (selection , error handling etc.)
 
 ### Contact Us Page
 

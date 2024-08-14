@@ -8,10 +8,10 @@ import { v4 as uuidv4 } from "uuid";
 
 function Featured({ window }) {
   const min = 0;
-  let max;
   const [featuredRecipes, setFeaturedRecipes] = useState([]);
   const [displayFrom, setDisplayFrom] = useState(min);
   const [displayTo, setDisplayTo] = useState(window);
+  const [max , setMax] = useState(0)
 
   const leftButtonUpdate = () => {
     if (displayFrom <= min) {
@@ -21,7 +21,8 @@ function Featured({ window }) {
     setDisplayFrom((c) => c - 1);
     setDisplayTo((c) => c - 1);
 
-    console.log(displayFrom, displayTo);
+    console.log(displayFrom, displayTo,max);
+
   };
 
   const rightButtonUpdate = () => {
@@ -31,6 +32,7 @@ function Featured({ window }) {
 
     setDisplayFrom((c) => c + 1);
     setDisplayTo((c) => c + 1);
+    console.log(displayFrom, displayTo,max);
   };
 
   useEffect(() => {
@@ -39,9 +41,11 @@ function Featured({ window }) {
         "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
       );
       const data = await response.json();
+
       setFeaturedRecipes(transformRecipes(data["meals"]));
-      max = featuredRecipes.length;
-      console.log(displayFrom, displayTo, max);
+      setMax(data["meals"].length);
+      console.log(displayFrom, displayTo,max);
+  
     };
     fetchFeatured();
   }, []);

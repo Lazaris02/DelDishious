@@ -22,13 +22,15 @@ A web application that one can browse others' recipies and upload his own!
 
 ### General
 
-- make design responsive
-- create login page
-- create signup page
-- create favorites page
-- create addRecipe page
-- style individual recipe page
+- make design responsive - very last thing to do
+- create login page //TODO
+- create signup page //TODO
+
+- style individual recipe page //TODO
 - make a functional newsletter tab - use form hook , add validation for email.
+
+- create favorites page - after server
+- create addRecipe page - after server
 
 - handle errors if the fetch from API doesn't work! - use state for errors and handle them in useEffect!
 - add an error page that shows up when something is wrong! , wrong redirecting

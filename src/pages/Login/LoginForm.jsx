@@ -11,7 +11,7 @@ function LoginForm() {
     <div className="w-3/4 flex mt-10 mb-10 m-auto rounded bg-gray-100 p-8 text-white">
       <div className="w-1/2 bg-[#01796F] flex flex-col space-y-4 flex-wrap-reverse">
         <form id="login" className="flex flex-col space-y-4">
-          <h2 className="text-center font-bold text-3xl p-2">Join The Cooking Journey</h2>
+          <h2 className="text-center font-bold text-5xl p-1 mt-2 indie-text">Welcome Back!</h2>
           <div className="flex justify-center items-center p-2">
             <label htmlFor="username">
               <Person2Icon fontSize="large"/>

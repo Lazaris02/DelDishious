@@ -1,7 +1,9 @@
+import LoginForm from "./LoginForm";
+
 function Login() {
   return (
     <>
-      <h1>Hi Login</h1>
+      <LoginForm />
     </>
   );
 }

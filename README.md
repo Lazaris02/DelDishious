@@ -35,7 +35,7 @@ A web application that one can browse others' recipies and upload his own!
 - handle errors if the fetch from API doesn't work! - use state for errors and handle them in useEffect!
 - add an error page that shows up when something is wrong! , wrong redirecting
 
-- stop the randomization of ratings when page is refreshed! -  probably possible when mongodb is created and the ratings are generated once in backend + merged with fetched data
+- stop the randomization of ratings when page is refreshed! - probably possible when mongodb is created and the ratings are generated once in backend + merged with fetched data
 
 ### Home Page
 
@@ -59,3 +59,4 @@ A web application that one can browse others' recipies and upload his own!
 ### Note
 
 - some letters in the mealdb api don't return any results!
+- if the API has been terminated , just create the bare minimum for signup and login form and end the project.

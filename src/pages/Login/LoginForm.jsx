@@ -1,8 +1,9 @@
 import AlterLoginField from "./AlterLoginField";
+import login_signup from "../../assets/login_signup.avif";
 function LoginForm() {
   return (
-    <div className="w-3/4 flex p-5 bg-red-500 p-4 m-auto">
-      <div className="w-1/2">
+    <div className="w-3/4 flex  mt-10 mb-10 m-auto rounded bg-gray-100 p-8">
+      <div className="w-1/2 bg-green-300">
         <form id="login">
           <div className="flex">
             <label htmlFor="username">
@@ -26,13 +27,13 @@ function LoginForm() {
 
         <hr />
 
-        <div>
-          <AlterLoginField text={"Google"} />
-          <AlterLoginField text={"FaceBook"} />
+        <div className="flex flex-col  items-center">
+          <AlterLoginField text={"Google"} color_name={"bg-blue-400"} />
+          <AlterLoginField text={"FaceBook"} color_name={""} />
           <AlterLoginField text={"Twitter"} />
         </div>
       </div>
-      <img src="" alt="side_image" />
+      <img src={login_signup} alt="side_image" className="w-1/2" />
     </div>
   );
 }

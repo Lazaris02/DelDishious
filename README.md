@@ -23,11 +23,10 @@ A web application that one can browse others' recipies and upload his own!
 ### General
 
 - make design responsive - very last thing to do
-- create signup page //TODO
 
-- style individual recipe page //TODO
 - make a functional newsletter tab - use form hook , add validation for email.
 
+- style individual recipe page //TODO
 - create favorites page - after server
 - create addRecipe page - after server
 
@@ -51,6 +50,12 @@ A web application that one can browse others' recipies and upload his own!
 ### Login Page
 
 - make the form functional //after backend setup
+- add correct navigation from buttons
+
+### Signup Page
+
+- make the form functional //after backend
+- add correct navigation from buttons
 
 ### backend
 

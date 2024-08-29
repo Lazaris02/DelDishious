@@ -26,8 +26,12 @@ function SignUp() {
         </div>
       </div>
 
-      <div className="w-1/2">
+      <div className="w-1/2 relative">
         <img src={signup_img} alt="signup_bg" className="h-full" />
+        <p className="absolute bottom-0 right-2 z-10 bg-black rounded p-1">
+          Already joined?{" "}
+          <span className="text-[#FF7F50] text-lg font-semibold">Login</span>
+        </p>
       </div>
     </div>
   );

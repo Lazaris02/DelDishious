@@ -23,7 +23,6 @@ A web application that one can browse others' recipies and upload his own!
 ### General
 
 - make design responsive - very last thing to do
-- create login page //TODO
 - create signup page //TODO
 
 - style individual recipe page //TODO
@@ -49,6 +48,10 @@ A web application that one can browse others' recipies and upload his own!
 
 - using form hook 1. add validation 2. handle the submission of the form
 
+### Login Page
+
+- make the form functional //after backend setup
+
 ### backend
 
 - AFS service , save the favourite list for every user.
@@ -60,3 +63,27 @@ A web application that one can browse others' recipies and upload his own!
 
 - some letters in the mealdb api don't return any results!
 - if the API has been terminated , just create the bare minimum for signup and login form and end the project.
+
+### General Improvements
+
+- make login and signup not have a nav-bar
+- maybe refactor reusable parts into a seperate css file
+
+## Things to avoid in my next web-project
+
+- DO NOT START FROM FRONTEND , first see what data I need and make RESTful API
+
+- anything that is reusable in the css part into a different css file from the begining
+
+- use grid more effectively
+
+- learn react best practices and apply from the beggining (f.e lazy loading)
+
+- use network tools more effectively
+
+- make the logo interactive in the html code , dont design and copy from FIGMA again
+
+- instead of making api calls to a foreign api design the data from the start as I want it at once,
+  thus avoiding the functions in utils that have to do with bringing the data in proper format.
+
+- learn react-router dom better!

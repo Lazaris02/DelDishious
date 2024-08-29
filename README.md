@@ -22,6 +22,8 @@ A web application that one can browse others' recipies and upload his own!
 
 ### General
 
+- SOS make login , signup , individual recipes not have a nav-bar
+
 - make design responsive - very last thing to do
 
 - make a functional newsletter tab - use form hook , add validation for email.

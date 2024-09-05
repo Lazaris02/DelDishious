@@ -17,12 +17,13 @@ const ratingLabels = {
 function RatingSection({ defaultRating }) {
   const [value, setValue] = useState(defaultRating);
   const [hover, setHover] = useState(-1);
-  const displayValue = () => console.log(value, hover);
+
   return (
-    <div>
-      <span>Rate this Recipe!</span>
+    <div className="flex flex-col text-center text-2xl text-wrap w-auto p-2 m-4 self-center bg-black bg-opacity-80 text-white rounded-lg">
+      <span className="text-2xl">Rate this Recipe!</span>
       <Rating
         name="simple-controlled"
+        className="self-center bg-white rounded-full p-2"
         defaultValue={value}
         max={5}
         precision={0.5}

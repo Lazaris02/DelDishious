@@ -67,7 +67,7 @@ function RecipeSingle() {
           </div>
         </div>
       </div>
-      <RatingSection defaultRating={2} />
+      <RatingSection defaultRating={5} />
     </>
   );
 }

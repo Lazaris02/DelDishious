@@ -14,7 +14,7 @@ function Footer() {
 
         <div className="flex flex-col">
           <NewsLetter
-            input_class="rounded px-2 text-[#01796F] font-bold text-center mr-1"
+            input_class="rounded px-2 text-[#01796F] font-bold text-center mr-1 focus:placeholder-transparent"
             form_class="mt-8 flex-1"
           />
           <span className="mt-auto self-center text-xl">

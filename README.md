@@ -28,7 +28,6 @@ A web application that one can browse others' recipies and upload his own!
 
 - make a functional newsletter tab - use form hook , add validation for email.
 
-- style individual recipe page //TODO
 - create favorites page - after server
 - create addRecipe page - after server
 
@@ -58,6 +57,10 @@ A web application that one can browse others' recipies and upload his own!
 
 - make the form functional //after backend
 - add correct navigation from buttons
+
+### Single Recipe Page
+
+- using filter function , remove all undefined items so that no "undefined shows up"!
 
 ### backend
 

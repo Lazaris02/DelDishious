@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 function ContactForm() {
   return (
     <form
@@ -13,6 +14,7 @@ function ContactForm() {
             type="text"
             id="form-name"
             className="form-input-design"
+            placeholder="True name"
             required
           />
         </div>
@@ -26,7 +28,7 @@ function ContactForm() {
           <input
             type="email"
             id="form-email"
-            className="form-input-design "
+            className="form-input-design"
             placeholder="xyz@mail.com"
             required
           />
@@ -55,7 +57,7 @@ function ContactForm() {
           name="more-info"
           id="more-info"
           placeholder="state your problem!"
-          className="bg-gray-200 rounded-lg p-1  w-1/2 h-fit"
+          className="bg-gray-200 rounded-lg p-1  w-1/2 h-fit focus:placeholder-transparent"
         ></textarea>
       </div>
       <span className="flex justify-center mt-4 p-2">
